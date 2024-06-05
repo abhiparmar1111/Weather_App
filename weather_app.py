@@ -33,7 +33,7 @@ def getWeather():
         clock.config(text=current_time)
         name.config(text="CURRENT WEATHER")
 
-        # Replace placeholders in the API URL with actual values
+       
         api_key = "0f752e4d31ec533cbd8c4277caf05a9e"
         api = f"https://api.openweathermap.org/data/2.5/weather?lat={location.latitude}&lon={location.longitude}&appid={api_key}"
         json_data = requests.get(api).json()
@@ -58,7 +58,7 @@ def getWeather():
         messagebox.showerror("Weather App", f"Invalid Entry: {e}")
 
 # Search box
-image_path1 = r"C:\Users\Abhayraj sinh parmar\Python Projects\weather_app_env\Search_box.png"
+image_path1 = r"C:\Users\Abhayraj sinh parmar\Python Projects\weather_app_env\images\Search_box.png"
 Search_image = PhotoImage(file=image_path1)
 myimage = Label(image=Search_image)
 myimage.place(x=20, y=20)
@@ -67,19 +67,19 @@ textfield = tk.Entry(root, justify="center", width=17, font=("poppins", 25, "bol
 textfield.place(x=50, y=40)
 textfield.focus()
 
-image_path2 = r"C:\Users\Abhayraj sinh parmar\Python Projects\weather_app_env\Search_icon.png"
+image_path2 = r"C:\Users\Abhayraj sinh parmar\Python Projects\weather_app_env\images\Search_icon.png"
 Search_icon = PhotoImage(file=image_path2)
 myimage_icon = Button(image=Search_icon, borderwidth=0, cursor="hand2", bg="#404040", command=getWeather)
 myimage_icon.place(x=400, y=34)
 
 # Logo
-image_path3 = r"C:\Users\Abhayraj sinh parmar\Python Projects\weather_app_env\WeatherLogo.png"
+image_path3 = r"C:\Users\Abhayraj sinh parmar\Python Projects\weather_app_env\images\WeatherLogo.png"
 Logo_image = PhotoImage(file=image_path3)
 logo = Label(image=Logo_image)
 logo.place(x=150, y=100)
 
 # Bottom Box
-image_path3 = r"C:\Users\Abhayraj sinh parmar\Python Projects\weather_app_env\Box.png"
+image_path3 = r"C:\Users\Abhayraj sinh parmar\Python Projects\weather_app_env\images\Box.png"
 Frame_image = PhotoImage(file=image_path3)
 frame_myimage = Label(image=Frame_image)
 frame_myimage.pack(padx=5, pady=5, side=BOTTOM)
